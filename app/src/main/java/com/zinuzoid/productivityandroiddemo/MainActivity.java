@@ -8,8 +8,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+	int a = 0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -18,12 +22,26 @@ public class MainActivity extends AppCompatActivity {
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
 
+		TextView text1 = (TextView) findViewById(R.id.text1);
+		TextView text2 = (TextView) findViewById(R.id.text2);
+		TextView text3 = (TextView) findViewById(R.id.text3);
+		TextView text4 = (TextView) findViewById(R.id.text4);
+		TextView text5 = (TextView) findViewById(R.id.text5);
+
+		text1.setText("HQxx");
+		text2.setText("HQxx");
+		text3.setText("HQxx");
+		text4.setText("HQxx");
+		text5.setText("HQxx");
+
 		FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 		fab.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View view) {
-				Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-						.setAction("Action", null).show();
+				Snackbar.make(view, "Lorem", Snackbar.LENGTH_LONG).show();
+
+				a++;
+				Toast.makeText(MainActivity.this, "Toast " + String.valueOf(a), Toast.LENGTH_SHORT).show();
 			}
 		});
 	}
@@ -44,10 +62,16 @@ public class MainActivity extends AppCompatActivity {
 
 		//noinspection SimplifiableIfStatement
 		if(id == R.id.action_settings) {
+			a++;
+			Toast.makeText(MainActivity.this, "Toast " + String.valueOf(a), Toast.LENGTH_SHORT).show();
 			return true;
 		}
 
 		return super.onOptionsItemSelected(item);
+	}
+
+	public void a() {
+
 	}
 
 }

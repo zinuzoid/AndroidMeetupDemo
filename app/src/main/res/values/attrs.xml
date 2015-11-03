@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<declare-styleable name="MyTextView">
+		<attr name="appearance" format="enum">
+			<enum name="plain" value="1"/>
+			<enum name="flashing" value="2"/>
+		</attr>
+		<attr name="underline" format="boolean"/>
+		<attr name="strikethrough" format="boolean"/>
+	</declare-styleable>
+
+	<declare-styleable name="customStyle">
+		<attr name="myTextViewStyle" format="reference"/>
+	</declare-styleable>
+
+</resources>

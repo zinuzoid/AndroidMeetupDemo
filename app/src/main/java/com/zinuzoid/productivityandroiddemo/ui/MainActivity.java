@@ -1,4 +1,4 @@
-package com.zinuzoid.productivityandroiddemo;
+package com.zinuzoid.productivityandroiddemo.ui;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -8,12 +8,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Toast;
+
+import com.zinuzoid.productivityandroiddemo.R;
 
 public class MainActivity extends AppCompatActivity {
 
-	int a = 0;
+	int a;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,18 +22,6 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 		Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 		setSupportActionBar(toolbar);
-
-		TextView text1 = (TextView) findViewById(R.id.text1);
-		TextView text2 = (TextView) findViewById(R.id.text2);
-		TextView text3 = (TextView) findViewById(R.id.text3);
-		TextView text4 = (TextView) findViewById(R.id.text4);
-		TextView text5 = (TextView) findViewById(R.id.text5);
-
-		text1.setText("HQxx");
-		text2.setText("HQxx");
-		text3.setText("HQxx");
-		text4.setText("HQxx");
-		text5.setText("HQxx");
 
 		FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 		fab.setOnClickListener(new View.OnClickListener() {
@@ -70,8 +59,12 @@ public class MainActivity extends AppCompatActivity {
 		return super.onOptionsItemSelected(item);
 	}
 
-	public void a() {
+	public void A() {
+		int a = ten() + 5;
+	}
 
+	public int ten() {
+		return 10;
 	}
 
 }

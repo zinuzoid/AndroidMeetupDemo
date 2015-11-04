@@ -20,7 +20,7 @@ public class MyTextView extends TextView {
 
 	public MyTextView(Context context) {
 		super(context);
-		init(context, null);
+		init(context, null)
 	}
 
 	public MyTextView(Context context, AttributeSet attrs) {

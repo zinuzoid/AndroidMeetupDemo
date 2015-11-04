@@ -13,7 +13,7 @@ import com.zinuzoid.productivityandroiddemo.R;
 
 public class MainActivity extends AppCompatActivity {
 
-	int a;
+	int a
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

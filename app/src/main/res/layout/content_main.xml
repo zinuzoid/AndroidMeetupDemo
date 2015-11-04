@@ -60,7 +60,8 @@
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:text="Hello World10"
-		hq:appearance="flashing"
+		hq:appearance="style1"
+		hq:flashing="true"
 		/>
 
 	<com.zinuzoid.productivityandroiddemo.ui.view.MyTextView
@@ -76,7 +77,7 @@
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:text="Hello World11"
-		hq:appearance="plain"
+		hq:appearance="style2"
 		/>
 
 	<com.zinuzoid.productivityandroiddemo.ui.view.MyTextView

@@ -2,6 +2,7 @@ package com.zinuzoid.productivityandroiddemo.ui.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 import android.view.animation.AlphaAnimation;
@@ -39,11 +40,18 @@ public class MyTextView extends TextView {
 		int appearanceIndex = typedArray.getInt(R.styleable.MyTextView_appearance, -1);
 		boolean underline = typedArray.getBoolean(R.styleable.MyTextView_underline, false);
 		boolean strikeThrough = typedArray.getBoolean(R.styleable.MyTextView_strikethrough, false);
+		boolean flashing = typedArray.getBoolean(R.styleable.MyTextView_flashing, false);
 		typedArray.recycle();
 
 		switch(appearanceIndex) {
 			case 2:
-				startBlinking();
+				setBackgroundColor(Color.RED);
+				break;
+			case 3:
+				setBackgroundColor(Color.BLUE);
+				break;
+			case 4:
+				setBackgroundColor(Color.GREEN);
 				break;
 		}
 
@@ -55,9 +63,13 @@ public class MyTextView extends TextView {
 			setPaintFlags(getPaintFlags() | Paint.STRIKE_THRU_TEXT_FLAG);
 		}
 
+		if(flashing) {
+			startFlashing();
+		}
+
 	}
 
-	private void startBlinking() {
+	private void startFlashing() {
 		AlphaAnimation anim = new AlphaAnimation(0.2f, 1.0f);
 		anim.setDuration(250);
 		anim.setRepeatMode(Animation.REVERSE);

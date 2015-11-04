@@ -4,8 +4,11 @@
 	<declare-styleable name="MyTextView">
 		<attr name="appearance" format="enum">
 			<enum name="plain" value="1"/>
-			<enum name="flashing" value="2"/>
+			<enum name="style1" value="2"/>
+			<enum name="style2" value="3"/>
+			<enum name="style3" value="4"/>
 		</attr>
+		<attr name="flashing" format="boolean"/>
 		<attr name="underline" format="boolean"/>
 		<attr name="strikethrough" format="boolean"/>
 	</declare-styleable>

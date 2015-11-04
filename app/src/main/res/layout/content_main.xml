@@ -64,19 +64,19 @@
 		/>
 
 	<com.zinuzoid.productivityandroiddemo.ui.view.MyTextView
-		android:id="@+id/text11"
-		android:layout_height="wrap_content"
-		android:layout_width="wrap_content"
-		android:text="Hello World11"
-		hq:appearance="plain"
-		/>
-
-	<com.zinuzoid.productivityandroiddemo.ui.view.MyTextView
 		android:id="@+id/text12"
 		android:layout_height="wrap_content"
 		android:layout_width="wrap_content"
 		android:text="Hello World12"
 		hq:strikethrough="true"
+		/>
+
+	<com.zinuzoid.productivityandroiddemo.ui.view.MyTextView
+		android:id="@+id/text11"
+		android:layout_height="wrap_content"
+		android:layout_width="wrap_content"
+		android:text="Hello World11"
+		hq:appearance="plain"
 		/>
 
 	<com.zinuzoid.productivityandroiddemo.ui.view.MyTextView
